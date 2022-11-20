@@ -150,6 +150,7 @@ import "unsafe"
 		"unsigned int":             uintW,
 		"double":                   doubleW,
 		"double*":                  doublePtrW,
+		"const double*":            doubleArrayW,
 		"bool":                     boolW,
 		"bool*":                    boolPtrW,
 		"int[2]":                   int2W,
@@ -180,6 +181,7 @@ import "unsafe"
 		"ImRect":                   imRectW,
 		"ImPlotPoint":              imPlotPointW,
 		"ImPlotPoint*":             imPlotPointPtrW,
+		"const ImPlotPoint":        imPlotPointW,
 	}
 
 	returnWrapperMap := map[string]returnWrapper{

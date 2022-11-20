@@ -52,6 +52,12 @@ func floatArrayW(arg ArgDef) (argType string, def string, varName string) {
 	return
 }
 
+func doubleArrayW(arg ArgDef) (argType string, def string, varName string) {
+	argType = "[]float64"
+	varName = fmt.Sprintf("(*C.double)(&(%s[0]))", arg.Name)
+	return
+}
+
 func boolW(arg ArgDef) (argType string, def string, varName string) {
 	return simpleValueW(arg.Name, "bool", "bool")
 }
